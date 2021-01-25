@@ -9,7 +9,7 @@
         v-for="member in group.memberList"
         :key="member.index"
       >
-        {{ member[2] }}
+        {{ member }}
       </li>
     </ul>
 
