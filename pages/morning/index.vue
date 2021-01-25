@@ -1,21 +1,41 @@
 <template>
   <section class="component">
     <div>
-      <h1>ページ1</h1>
+      <h1 :style="{ color: group.color }">{{ group.groupName }}</h1>
     </div>
+    <ul class="member-list">
+      <li
+        class="member-list__item"
+        v-for="member in group.memberList"
+        :key="member.index"
+      >
+        {{ member[2] }}
+      </li>
+    </ul>
+
     <nuxt-link to="/">トップへ</nuxt-link>
   </section>
 </template>
 
 <script>
+export default {
+  asyncData() {
+    const users = require(`~/assets/json/member.json`);
+    const group = users["morning"];
+    return {
+      group
+    };
+  }
+};
 </script>
 
-<style>
+<style lang="scss">
 .component {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: start;
   text-align: center;
+}
+.member-list {
+  .member-list__item {
+    text-align: left;
+  }
 }
 </style>

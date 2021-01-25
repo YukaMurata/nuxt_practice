@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install # Or yarn install
 
@@ -21,3 +21,8 @@ $ npm run generate
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
+## Nuxt の勉強用砂場
+
+- ハロー！プロジェクトグループ別ページ作成
+- まずは、Nuxt を思い出すところから
+- 静的サイトジェネレータ使ってごにょごにょまで行きたい
